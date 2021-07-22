@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Google</title>
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.css">
+    <head>
+        <title>Google</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles.css">
 <style>
-
+    body {
+        margin: 0;
+    }
     .logo {
         position: fixed;
         left: 50%;
@@ -14,17 +16,113 @@
         transform: translate(-50%, -50%);
     }
     
-    </style>
-</head>
+    .navbar {
+        Position: fixed;
+        width: 100%;
+        Height: 46px;;
+        bottom: 0;
+        background-color: #f2f2f2;
+    }
+
+    .footer-links {
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        padding: 16px;
+        bottom:0;
+        position: fixed;
+        color: #70757a;
+        font-size: 14px;
+    }
+
+    .advertising {
+        left: 19px;
+    }
+
+    .business {
+        left: 118px;
+    }
+    .how-search-works {
+        left: 205px;
+    }
+    .privacy {
+        right: 168px;
+    }
+
+    .terms {
+        right: 100px;
+    }
+
+    .settings {
+        right:19px;
+    }
+
+    .leaf {
+        left: 661px;
+        height: 14px;
+        bottom: 18px;
+        position: fixed;
+    }
+
+    .climate {
+        left: 663px;
+    }
+</style>
+    </head>
 
 <body>
 
+    <div>
+        <img src="googlelogo_color_272x92dp.png" alt="Google Logo" class="logo">
+    </div>
 
-<div>
-<img src="googlelogo_color_272x92dp.png" alt="Google Logo" class="logo">
-</div>
+    <div class="navbar">    
+    </div>
 
+    <a href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2m--ahpm-0000000078-0000000000&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1#!/">
+        <div class="footer-links advertising">
+            Advertising
+        </div>
+    </a>
 
+    <a href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=us-en_US-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/">
+        <div class="footer-links business">
+            Business
+        </div>
+    </a>
+
+    <a href="https://www.google.com/search/howsearchworks/?fg=1">
+        <div class="footer-links how-search-works">
+            How Search works
+        </div>
+    </a>
+
+    <a href="https://policies.google.com/privacy?hl=en&fg=1">
+        <div class="footer-links privacy">
+            Privacy
+        </div>
+    </a>
+
+    <a href="https://policies.google.com/terms?hl=en&fg=1">
+        <div class="footer-links terms">
+            Terms
+        </div>
+    </a>
+
+    <a href="">
+        <div class="footer-links settings">
+            Settings
+        </div>
+    </a>
+
+    <div class="footer-links leaf">
+        <img src="leaf.png" alt="leaf" class="leaf">
+    </div>
+
+    <a href="https://sustainability.google/commitments/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">
+        <div class="footer-links climate">
+            Carbon neutral since 2007
+        </div>
+    </a>
 
 </body>
 
