@@ -12,14 +12,14 @@
         position: fixed;
         left: 50%;
         right: 50%;
-        top: 35%;
+        top: 293px;
         transform: translate(-50%, -50%);
     }
     
     .navbar {
         Position: fixed;
         width: 100%;
-        Height: 46px;;
+        Height: 47px;;
         bottom: 0;
         background-color: #f2f2f2;
     }
@@ -66,6 +66,44 @@
     .climate {
         left: 663px;
     }
+
+    .search {
+        border-radius: 24px;  
+        width: 584px;
+        height: 46px;
+        position: fixed;
+        top: 365px;
+        left: 460px; 
+        border: 1px solid #dfe1e5;
+        text-indent: 45px;     
+    }
+
+    .advertising:hover, .business:hover, .how-search-works:hover, .privacy:hover, .terms:hover, .settings:hover, .climate:hover {
+        text-decoration: underline;
+    }
+
+    input[type=search] {
+    outline: 0px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: #222;
+    }
+
+    input[type=search]:hover {
+        box-shadow: 0 2px 2px 1px #dfe1e5;
+        transform: scale(1.007);
+    }
+
+    .magnifying-glass {
+        opacity: 0.85;
+        width: 17.1px;
+        height: auto;
+        position: fixed;
+        left: 477px;
+        top: 380px;
+        z-index: 1;
+        }
+
 </style>
     </head>
 
@@ -123,7 +161,11 @@
             Carbon neutral since 2007
         </div>
     </a>
-
+    <div>
+        <img src="magnifying-glass-1976105_960_720.png" class="magnifying-glass">
+    </div>
+    <input type="search" id="site-search" name="q" class="search">
+    
 </body>
 
 
