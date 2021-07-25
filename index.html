@@ -3,7 +3,6 @@
     <head>
         <title>Google</title>
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="styles.css">
 <style>
     body {
         margin: 0;
@@ -78,9 +77,25 @@
         text-indent: 45px;     
     }
 
-    .advertising:hover, .business:hover, .how-search-works:hover, .privacy:hover, .terms:hover, .settings:hover, .climate:hover {
+    .images:hover, .gmail:hover, .store:hover, .about:hover, .advertising:hover, .business:hover, .how-search-works:hover, .privacy:hover, .terms:hover, .settings:hover, .climate:hover  {
         text-decoration: underline;
     }
+
+    .button:hover {
+	background: #2b7de9;
+	-moz-box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
+	box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
+    cursor: pointer;
+    }
+
+    .myButton:hover {
+        background-color: rgba(60,64,67,0.08);
+        border-radius: 10px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+    
 
     input[type=search] {
     outline: 0px solid black;
@@ -103,6 +118,110 @@
         top: 380px;
         z-index: 1;
         }
+    
+    .header-links {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 16px;
+        top:0;
+        position: fixed;
+        color: #222;
+        font-size: 14px;
+        }
+    .about {
+        left: 10px;
+        top:6px;
+        text-decoration: none;
+    }
+
+    .store {
+        left: 67px;
+        top: 6px;
+        text-decoration: none;
+    }
+
+    .button {
+        background: #1a73e8;
+        border: 1px solid transparent;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.25px;
+        text-align: center;
+        border-radius: 4px;
+        color:#fff;
+        height:36px;
+        width: 96px;
+        position: fixed;
+        top: 12px;
+        right: 19px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-right:2px;
+        padding-bottom: 4px;
+    }
+
+    .myButton{
+        background:url(index.png) no-repeat;
+        cursor:pointer;
+        border:none;
+        width:300px;
+        height: 225px;
+        right: -7px;
+        top: -82px;
+        position:fixed;
+        transform: scale(0.073);
+        opacity: 0.7;        
+    }
+
+    .gmail {
+        right: 226px;
+        top: 7px;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .images {
+        right: 169px;
+        top: 7px;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .google-search {
+        background-color: #f8f9fa;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #3c4043;
+        font-size: 14px;
+        text-align: center;
+        position: fixed;
+        height: 36px;
+        width: 127px;
+        left: 611.5px;
+        top: 440px;
+    }
+
+    .lucky {
+        background-color: #f8f9fa;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #3c4043;
+        font-size: 14px;
+        text-align: center;
+        position: fixed;
+        height: 36px;
+        width: 142px;
+        left: 750.7px;
+        top: 440px;
+    }
+
+    .google-search:hover, .lucky:hover {
+        box-shadow: 0 1px 1px rgba (0,0,0,.1);;
+        background-color: #f8f9fa;
+        border: 1px solid #dadce0;
+        color: #202124;
+        cursor: pointer;
+    }
 
 </style>
     </head>
@@ -168,6 +287,33 @@
         <input type="search" id="site-search" name="q" class="search">
     </form>
 
+    
+    <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header" class="header-links about">
+        About
+    </a>
+    
+    <a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US" class="header-links store">
+        Store
+    </a>
+
+    <button onclick="location.href='https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin'" type="button" class="button">Sign in</button>
+    <button class="myButton"></button>
+
+    <a href="https://www.google.com/gmail/about/" class="header-links gmail">
+        Gmail
+    </a>
+
+    <a href="https://www.google.com/imghp?hl=en&ogbl" class="header-links images">
+        Images
+    </a>
+
+    <button class="google-search">
+        Google Search
+    </button>
+
+    <button class="lucky" onclick="location.href='https://www.youtube.com/watch?v=A732Cuuo2tI'">
+        I'm Feeling Lucky
+    </button>
     <script>
         const sendToGoogle = (event) => {
             event.preventDefault()
