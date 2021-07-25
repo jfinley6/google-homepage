@@ -283,7 +283,10 @@
     <div>
         <img src="magnifying-glass-1976105_960_720.png" class="magnifying-glass">
     </div>
-    <input type="search" id="site-search" name="q" class="search">
+    <form id="search-form">
+        <input type="search" id="site-search" name="q" class="search">
+    </form>
+
     
     <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header" class="header-links about">
         About
@@ -311,6 +314,18 @@
     <button class="lucky" onclick="location.href='https://www.youtube.com/watch?v=A732Cuuo2tI'">
         I'm Feeling Lucky
     </button>
+    <script>
+        const sendToGoogle = (event) => {
+            event.preventDefault()
+            
+            const searchTerm = document.getElementById('site-search').value
+            const formattedSearchTerm = searchTerm.replace(" ", "+")
+            window.location.href = `http://google.com/search?q=${formattedSearchTerm}`;
+        }
+
+        const searchForm = document.getElementById('search-form')
+        searchForm.addEventListener("submit", sendToGoogle, false); 
+    </script>
 </body>
 
 
